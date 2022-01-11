@@ -13,10 +13,17 @@ Mayara C. Marinho
 ## Notebook
 
 ### Matriz de confusão
-TP: "true positive", classificado certo como positivo
-FP "false positive", classificado errado como positivo
-TN: "true negative", classificado certo como negativo
-FN: "false negative", classificado falso como negativo
+- TP: "true positive", classificado certo como positivo
+- FP "false positive", classificado errado como positivo
+- TN: "true negative", classificado certo como negativo
+- FN: "false negative", classificado falso como negativo
+
+|                                     | Label real positiva | Label real negativa  | 
+| ----------------------------------- | ------------------- | -------------------- |
+| Label definida pelo modelo positiva | `true positive`     | `false positive`     |
+| Label definida pelo modelo negativa | `false negative`    | `true negative`      |
+
+
 
 - **"Accuracy"**: Porcentagem de amostras rotuladas corretamente, de acordo com a predição do modelo. Esta métrica não funciona bem com dados cujas classes são desbalanceadas, dessa forma não é comumente utilizada para classificação de textos.
 ```
