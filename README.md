@@ -5,12 +5,38 @@ Anotações de estudo sobre Data Science.
 Mayara C. Marinho
 
 ## Sumário
+0) Aprendizado supervisionado x não supervisionado
 0) Matriz de confusão
 0) Bias x variância
 1) Autoencoders
 2) Multinomial Naive Bayes Classifier
 
 ## Notebook
+
+### Aprendizado supervisionado x não supervisionado
+
+#### Aprendizado supervisionado
+**Dados:** Dados de treinamento rotulados;x: dados; y: rótulo.
+
+**Objetivo:** Aprender uma função que gere algo a partir dos dados de treinamento (entrada); x -> y.
+
+**Exemplos:**
+- Classificação
+- Detecção de objetos
+- Semantic segmentation (segmenta uma imagem de acordo com características dos pixels)
+- Captação de imagem (transforma uma imagem em frases)
+
+#### Aprendizado não supervisionado
+**Dados:** Dados de treinamento não rotulados.
+
+**Objetivo:** Aprender propriedades/estruturas "escondidas" a partir dos dados informados.
+
+**Exemplos:**
+- Clustering
+- Redução de dimensionalidade
+- Feature learning (aprende propriedades específicas)
+- Density estimation (estima a distribuição/densidade dos dados)
+
 
 ### Matriz de confusão
 - TP: "true positive", classificado certo como positivo
@@ -49,6 +75,24 @@ F = [(B^2 + 1)PR]/(B^2P +R)
 - **Variância**: é o quanto a quantidade de acertos do modelo varia de acordo com diferentes predições, com diferentes valores de teste.
 
 ### Autoencoders
+
+#### O que é?
+Os autoencoders são uma técnica de aprendizado que utiliza redes neurais para codificar uma entrada (por meio de neurônios) e depois decodificá-la para gerar uma nova representação como saída. Ou seja, é uma técnica que aprende a partir de exemplos e gera saídas com propriedades úteis extraídas dos exemplos originais.
+
+**Características:**
+- Não supervisionado (Alguns dizem que é auto supervisionado) 
+
+#### Para que pode ser utilizado?
+- Remoção de ruídos
+- Redução de dimensionalidade para visualização de dados
+
+#### Como funciona?
+Ele codifica os nós de entrada em nós ocultos (neurônios) e os decodifica em nós de saída.
+
+A codificação é feita por sinapses positivas e negativas.
+
+#### Vantagens
+#### Desvantagens
 
 ### Multinomial Naive Bayes Classifier
 #### O que é?
