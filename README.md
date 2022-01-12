@@ -74,26 +74,6 @@ F = [(B^2 + 1)PR]/(B^2P +R)
 - **Bias**: é a diferença entre o valor da predição do modelo e o valor real que deveria ser obtido.
 - **Variância**: é o quanto a quantidade de acertos do modelo varia de acordo com diferentes predições, com diferentes valores de teste.
 
-### Autoencoders
-
-#### O que é?
-Os autoencoders são uma técnica de aprendizado que utiliza redes neurais para codificar uma entrada (por meio de neurônios) e depois decodificá-la para gerar uma nova representação como saída. Ou seja, é uma técnica que aprende a partir de exemplos e gera saídas com propriedades úteis extraídas dos exemplos originais.
-
-**Características:**
-- Não supervisionado (Alguns dizem que é auto supervisionado) 
-
-#### Para que pode ser utilizado?
-- Remoção de ruídos
-- Redução de dimensionalidade para visualização de dados
-
-#### Como funciona?
-Ele codifica os nós de entrada em nós ocultos (neurônios) e os decodifica em nós de saída.
-
-A codificação é feita por sinapses positivas e negativas.
-
-#### Vantagens
-#### Desvantagens
-
 ### Multinomial Naive Bayes Classifier
 #### O que é?
 
