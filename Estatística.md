@@ -80,3 +80,30 @@ for stratum, position in [(G, 'G'), (F, 'F'), (C, 'C'), (GF, 'G/F'), (FC, 'F/C')
 position_most_points = max(points_per_position, key=points_per_position.get)
     
 ```
+
+### Atividade 4
+
+**Task:** Perform stratified sampling on the data set 100 times, and sample strata proportionally.
+
+```
+stratum_1 = wnba[wnba['Games Played'] <= 12]
+stratum_2 = wnba[(wnba['Games Played'] > 12) & (wnba['Games Played'] <= 22)]
+stratum_3 = wnba[wnba['Games Played'] > 22]
+
+sample = []
+mean_points = []
+population_mean = wnba['PTS'].mean()
+
+# Sample each stratum proportionally
+for i in range(100):
+    sample_1 = stratum_1.sample(1, random_state = i)
+    sample_2 = stratum_2.sample(2, random_state = i)
+    sample_3 = stratum_3.sample(7, random_state = i)
+    
+    sample = pd.concat([sample_1, sample_2, sample_3])
+    
+    mean_points.append(sample['PTS'].mean())
+
+plt.scatter(x=range(1,101), y=mean_points)
+plt.axhline(y=population_mean)   
+```
