@@ -125,3 +125,23 @@ Ocorre quando uma população é dividida em grupos menores, que podem ser chama
 
 **Task:** Let's simulate a cluster sampling on our data set.
 
+```
+all_data = wnba
+sample = pd.DataFrame()
+
+# Seleciona 4 cluster randômicos
+selected_clusters = pd.Series(wnba['Team'].unique()).sample(4, random_state = 0)
+
+# Pega todos os dados de cada cluster selecionado
+for cluster in selected_clusters:
+    data = wnba[wnba['Team'] == cluster]
+    sample = sample.append(data)
+
+sampling_error_height = all_data['Height'].mean() - sample['Height'].mean()
+
+sampling_error_age = all_data['Age'].mean() - sample['Age'].mean()
+
+sampling_error_BMI = all_data['BMI'].mean() - sample['BMI'].mean()
+
+sampling_error_points = all_data['PTS'].mean() - sample['PTS'].mean()
+```
