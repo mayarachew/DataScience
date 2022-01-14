@@ -107,3 +107,13 @@ for i in range(100):
 plt.scatter(x=range(1,101), y=mean_points)
 plt.axhline(y=population_mean)   
 ```
+
+Notou-se que o resultado não foi muito melhor que o anterior, mesmo amostrando por stratum. Isso se deve ao fato do parâmetro Games Played não ter sido a melhor opção, pois um jogador poderia entrar para jogar por 5 minutos enquanto outro poderia jogar por 40 minutos e os dois teriam participado de um jogo. Assim, escolher o parâmetro minutos de jogo pode ser mais correto que quantidade de jogos.
+
+Dicas para amostragem:
+- Diminuir a variedade em cada 'stratum'.
+"For instance, avoid having in the same stratum a player that has scored 10 points and a player that has scored 500. If the variability is high, it might be a sign that you either need more granular stratification (you need more strata), or you need to change the criterion of stratification (an example of criterion is minutes played)."
+- Maximizar a variedade entre 'stratum's diferentes.
+"Good strata are different from one another. If you have strata that are similar to one another with respect to what you want to measure, you might need a more granular stratification, or you might need to change the stratification criterion. On the previous screen, stratifying the data by games played resulted in strata that were similar to each other regarding the distribution of the total points. We managed to increase the variability between strata by changing the criterion of stratification to minutes played."
+- O critério de estratificação deve estar fortemente relacionado à propriedade que você está querendo medir
+"For instance, the column describing minutes played (the criterion) should be correlate strongly with the number of total points (property we want to measure)."
