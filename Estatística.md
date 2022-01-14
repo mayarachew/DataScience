@@ -53,3 +53,30 @@ for idx in range(100):
 plt.scatter(x=range(1,101), y=mean_list)
 plt.axhline(y=population_mean)
 ```
+
+Ao coletar uma amostra randômica simples, conforme aumentamos o tamanho da amostra percebemos que os valores da amostra variam menos em relação à média da população. Também devemos tomar o cuidado de coletar a maior amostra possível para diminuir as chances de pegarmos amostras não representativas.
+
+### Atividade 3
+
+**Task:** Perform stratified sampling: stratify the dataset by player position, and then do simple random sampling on every stratum. At the end, use the sample to determine which position scores the highest number of points per game.
+
+```
+print(wnba['Pos'].unique())
+
+wnba['Points per game'] = wnba['PTS'] / wnba['Games Played']
+
+F = wnba[wnba.Pos == 'F']
+G = wnba[wnba.Pos == 'G']
+C = wnba[wnba.Pos == 'C']
+GF = wnba[wnba.Pos == 'G/F']
+FC = wnba[wnba.Pos == 'F/C']
+
+points_per_position = {}
+
+for stratum, position in [(G, 'G'), (F, 'F'), (C, 'C'), (GF, 'G/F'), (FC, 'F/C')]:
+    sample = stratum['Points per game'].sample(10, random_state=0)
+    points_per_position[position]=sample.mean()
+    
+position_most_points = max(points_per_position, key=points_per_position.get)
+    
+```
