@@ -117,3 +117,11 @@ Dicas para amostragem:
 "Good strata are different from one another. If you have strata that are similar to one another with respect to what you want to measure, you might need a more granular stratification, or you might need to change the stratification criterion. On the previous screen, stratifying the data by games played resulted in strata that were similar to each other regarding the distribution of the total points. We managed to increase the variability between strata by changing the criterion of stratification to minutes played."
 - O critério de estratificação deve estar fortemente relacionado à propriedade que você está querendo medir
 "For instance, the column describing minutes played (the criterion) should be correlate strongly with the number of total points (property we want to measure)."
+
+## Cluster sampling
+Ocorre quando uma população é dividida em grupos menores, que podem ser chamados de clusters.
+
+### Atividade Cluster Sampling
+
+**Task:** Let's simulate a cluster sampling on our data set.
+
