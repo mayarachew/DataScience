@@ -11,7 +11,8 @@ When calling Series.sample(), use the argument random_state = 1. This makes your
 Find the maximum number of games using the sample, and assign the result to a variable named statistic.
 Measure the sampling error, and assign the result to a variable named sampling_error.
 
-<!-- import pandas as pd
+```
+import pandas as pd
 wnba = pd.read_csv('wnba.csv')
 
 wnba.head()
@@ -26,4 +27,5 @@ sample = wnba['Games Played'].sample(30, random_state = 1)
 
 statistic = sample.max()
 
-sampling_error = parameter - statistic -->
+sampling_error = parameter - statistic
+```
