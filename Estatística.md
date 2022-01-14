@@ -1,6 +1,6 @@
-Task: Take one measure of the sampling error.
+**Task:** Take one measure of the sampling error.
 
-Dataset https://www.kaggle.com/jinxbe/wnba-player-stats-2017/version/1.
+**Dataset:** https://www.kaggle.com/jinxbe/wnba-player-stats-2017/version/1.
 
 ```
 import pandas as pd
