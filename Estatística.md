@@ -321,6 +321,38 @@ wnba['Games Played'].plot.hist(grid = True, xticks = arange(2,585,58.2), rot = 3
 print(wnba['Games Played'].describe())
 ```
 
+```
+import matplotlib.pyplot as plt
+
+# bins = 8: número de barras
+wnba['Games Played'].plot.hist(range = (1,32), bins = 8, title="The distribution of players by games played")
+
+plt.xlabel('Games played')
+```
+
 **Fato curioso:** em histogramas, as barras são juntas umas às outras, sem intervalo entre elas, devido ao fato de que sabemos que não existem valores intermediários entre as barras. Em gráficos de barras existem intervalos porque nós não sabemos como as variáveis ordinais foram definidas, logo, não temos certeza de que os valores são adjacentes.
 
+### Formatos
 
+Distribuições assimétricas ou "Skewed distributions é uma medida de falta de simetria na distribuição de frequência. 
+
+- **"Left skewed" ou "negatively skewed":** quando a calda do gráfico aponta para a esquerda.
+- **"Right skewed" ou "positively skewed":** quando a calda do gráfico aponta para a direita. 
+
+PS: a calda do gráfico é a parte onde tem as menores barras e elas se encontram decrescendo de tamanho.
+
+```
+# right skewed
+wnba['AST'].plot.hist()
+
+# left skewed
+wnba['FT%'].plot.hist()
+```
+- **"Normal distribution":** quando a distribuição é simétrica e se parece com uma gaussiana.
+
+```
+# normal distribution
+wnba['Weight'].plot.hist()
+```
+
+- **"Uniform distribution":** quando a distribuição é simétrica e os valores são distribuidos uniformemente, gerando barras da mesma altura.
