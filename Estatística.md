@@ -255,3 +255,60 @@ age_lower_quartile = wnba['Age'].describe()['25%']
 
 age_10th_percentile = wnba['Age'].describe([.10])['10%']
 ```
+
+Em casos de alta granularidade nos dados da tabela, pode ser interessante agrupar os valores por meio do parâmetro "bins" do "Series.value_counts()".
+
+**Task:** Gerar uma distribuição de frequência agrupada para a variável "PTS" do dataset com: 10 intervalos, respectivas porcentagens e em ordem decrescente.
+
+```
+grouped_freq_table = wnba['PTS'].value_counts(normalize = True, bins = 10).sort_index(ascending=False) * 100
+```
+
+Dessa forma, não temos controle sob os intervalos definidos. Caso seja do nosso interesse definí-los manualmente, podemos por meio da função "pd.interval_range()".
+
+**Task:** Gerar uma distribuição de frequência agrupada para a variável "PTS" do dataset com: frequência de 60, começando no 0, finalizando no 600.
+
+```
+intervals = pd.interval_range(start = 0, end = 600, freq = 60)
+
+gr_freq_table_10 = wnba["PTS"].value_counts(bins = intervals).sort_index()
+```
+
+# Bar plots
+
+Gráfico de barras vertical:
+```
+wnba['Age'].value_counts().plot.bar()
+```
+
+Gráfico de barras horizontal:
+```
+# grafico de barras horizontal
+wnba['Age'].value_counts().plot.barh()
+```
+
+Parâmetro "rot" para rotacionar as labels em 45 graus:
+```
+wnba['Age'].value_counts().plot.bar(rot=45)
+```
+
+Parâmetro "title" para adicionar título ao gráfico:
+```
+wnba['Age'].value_counts().plot.bar(title='Idade dos jogadores de WNBA')
+```
+
+Gráfico de pizza:
+```
+# autopct = '%.2f%%': mostra porcentagens
+import matplotlib.pyplot as plt
+wnba['Exp_ordinal'].value_counts().plot.pie(figsize = (6,6), autopct = '%.2f%%', title="Percentage of players in WNBA by level of experience")
+plt.ylabel('')
+```
+
+Histograma:
+```
+from numpy import arange
+# grid = True: adiciona linhas verticais/horizontais no gráfico
+# xticks = arange(2,585,58.2): define os valores do mínimos e máximos de x
+wnba['PTS'].plot.hist(grid = True, xticks = arange(2,585,58.2), rot = 30)
+```
