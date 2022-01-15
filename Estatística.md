@@ -173,3 +173,28 @@ Neste dataset, temos as seguintes variáveis discretas: Games Played, FGM, FGA, 
 - **Contínuas:** quando existe uma infinidade de valores possíveis intermediários entre dois valores adjacentes. Exemplo: altura de uma pessoa.
      
 Neste dataset, temos as seguintes variáveis discretas: Height, Weight, Age, FT%, Weight_deviation,...
+
+## Distribuições de frequência
+
+**.value_counts()** mostra uma tabela de distribuição dos valores.
+
+**Series.sort_index()** pode ser utilizado para ordenar uma tabela de acordo com o índice dela.
+
+Para criar uma nova coluna baseada em colunas já existentes, pode ser feito o seguinte:
+
+```
+def make_pts_ordinal(row):
+    if row['PTS'] <= 20:
+        return 'poucos pontos'
+    else:
+        return 'muitos pontos'
+    
+wnba['PTS_ordinal'] = wnba.apply(make_pts_ordinal, axis = 1)
+```
+
+**.iloc[]** pode ser utilizado para reordenar as linhas da tabela gerada pelo .value_counts(). Cada número equivale a uma linha, ou seja, a primeira equivale a 0. 
+
+```
+pts_ordinal_desc = wnba['PTS_ordinal_scale'].value_counts().iloc[[4, 3, 0, 2, 1, 5]]
+```
+
