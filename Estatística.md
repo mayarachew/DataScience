@@ -149,3 +149,27 @@ sampling_error_points = all_data['PTS'].mean() - sample['PTS'].mean()
 - "Descriptive statistics": Descrição da amostra ou população (proporções, métricas, propriedades).
 - "Inferential statistics": Quando utilizamos uma amostra para inferir conclusões a respeito de uma população.
 
+"Variables that describe qualities are called qualitative variables or categorical variables. Generally, qualitative variables describe what or how something is. Quantitative variables describe a quantity using real numbers, but there are also cases when words are used instead."
+
+
+# Variables in Statistics
+
+### Atividade
+
+Variáveis ordinais podem ser tanto números quanto palavras.
+
+Quantitative variables can be measured on ordinal, interval, or ratio scales.
+
+Neste dataset, temos variáveis medidas em escala de intervalo e de razão:
+- Intervalo: ['Birthdate', 'Weight_deviation']
+- Razão: ['Height', 'Weight', 'BMI', 'Age', 'Experience', 'Games Played', 'MIN', 'FGM', 'FGA', 'FG%', '15:00','3PA', '3P%', 'FTM', 'FTA', 'FT%', 'OREB', 'DREB', 'REB', 'AST', 'STL', 'BLK', 'TO', 'PTS', 'DD2', 'TD3']
+
+#### Tipos de variáveis:
+
+- **Discretas:** quando não existem valores possíveis intermediários entre dois valores adjacentes. Exemplo: quantidade de pessoas em uma sala.
+
+Neste dataset, temos as seguintes variáveis discretas: Games Played, FGM, FGA, 3PA, FTM, FTA, OREB,...
+
+- **Contínuas:** quando existe uma infinidade de valores possíveis intermediários entre dois valores adjacentes. Exemplo: altura de uma pessoa.
+     
+Neste dataset, temos as seguintes variáveis discretas: Height, Weight, Age, FT%, Weight_deviation,...
