@@ -276,12 +276,15 @@ gr_freq_table_10 = wnba["PTS"].value_counts(bins = intervals).sort_index()
 
 # Bar plots
 
-Gráfico de barras vertical:
+## Gráfico de barras
+Podem ser utilizadas variáveis nominais e ordinais.
+
+### Vertical
 ```
 wnba['Age'].value_counts().plot.bar()
 ```
 
-Gráfico de barras horizontal:
+### Horizontal
 ```
 # grafico de barras horizontal
 wnba['Age'].value_counts().plot.barh()
@@ -297,7 +300,8 @@ Parâmetro "title" para adicionar título ao gráfico:
 wnba['Age'].value_counts().plot.bar(title='Idade dos jogadores de WNBA')
 ```
 
-Gráfico de pizza:
+## Gráfico de pizza
+Podem ser utilizadas variáveis nominais e ordinais. PS: melhor evitar, pois é difícil para o ser humano identificar proporções maiores ou menores por meio de ângulos.
 ```
 # autopct = '%.2f%%': mostra porcentagens
 import matplotlib.pyplot as plt
@@ -305,10 +309,18 @@ wnba['Exp_ordinal'].value_counts().plot.pie(figsize = (6,6), autopct = '%.2f%%',
 plt.ylabel('')
 ```
 
-Histograma:
+## Histograma
+Histograma é um gráfico de barras que representa a distribuição de frequências de uma variável. Pode incrementar a interpretação da função "db.describe()".
 ```
 from numpy import arange
+
 # grid = True: adiciona linhas verticais/horizontais no gráfico
 # xticks = arange(2,585,58.2): define os valores do mínimos e máximos de x
-wnba['PTS'].plot.hist(grid = True, xticks = arange(2,585,58.2), rot = 30)
+wnba['Games Played'].plot.hist(grid = True, xticks = arange(2,585,58.2), rot = 30)
+
+print(wnba['Games Played'].describe())
 ```
+
+**Fato curioso:** em histogramas, as barras são juntas umas às outras, sem intervalo entre elas, devido ao fato de que sabemos que não existem valores intermediários entre as barras. Em gráficos de barras existem intervalos porque nós não sabemos como as variáveis ordinais foram definidas, logo, não temos certeza de que os valores são adjacentes.
+
+
