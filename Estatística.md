@@ -176,7 +176,7 @@ Neste dataset, temos as seguintes variáveis discretas: Height, Weight, Age, FT%
 
 ## Distribuições de frequência
 
-**.value_counts()** mostra uma tabela de distribuição dos valores.
+**Series.value_counts()** mostra uma tabela de distribuição dos valores.
 
 **Series.sort_index()** pode ser utilizado para ordenar uma tabela de acordo com o índice dela.
 
@@ -198,3 +198,60 @@ wnba['PTS_ordinal'] = wnba.apply(make_pts_ordinal, axis = 1)
 pts_ordinal_desc = wnba['PTS_ordinal_scale'].value_counts().iloc[[4, 3, 0, 2, 1, 5]]
 ```
 
+Para descobrir a porcentagem de cada valor em relação ao todo, podemos aplicar o Series.value_counts(normalize = True) * 100.
+
+**Frequência absoluta:** quantidade total de vezes que obtivemos um valor como resposta.
+**Frequência relativa:** a relação da frequência absoluta com o valor total de respostas.
+
+### Atividade
+
+**Task:** Descobrir qual a porcentagem de jogadores que possuem 24 anos.
+
+```
+percentage_24 = wnba['Age'].value_counts(normalize = True)[24] * 100
+```
+
+**Task:** Descobrir qual a porcentagem de jogadores que possuem 24 anos ou mais.
+
+```
+percentage_over_24 = wnba['Age'].value_counts(normalize = True).sort_index().loc[24:].sum()* 100
+```
+
+**Percentile:** Se o valor x for o vigésimo percentil, significa que 20% de todos os valores da distribuição são iguais ou menores que x.
+
+**Task:** Descobrir qual a porcentagem de jogadores que possuem 24 anos ou menos.
+
+```
+percentage_over_24 = wnba['Age'].value_counts(normalize = True).sort_index().loc[:24].sum()* 100
+```
+ou
+```
+from scipy.stats import percentileofscore
+
+# kind = 'weak': indica que queremos os valores iguais ou menores.
+percentage_over_24 = percentileofscore(a = wnba['Age'], score = 24, kind = 'weak')
+```
+
+**Task:** Descobrir qual a porcentagem de jogadores que possuem mais que 24 anos.
+
+```
+from scipy.stats import percentileofscore
+
+percentage_over_24 = (100 - percentileofscore(a = wnba['Age'], score = 24, kind = 'weak'))
+```
+
+Podemos descobrir informações (contagem, média, std, valor mínimo, 25%, 50%, 75%, valor máximo, nome da variaável, tipo da variável) de uma coluna do nosso dataset pelo comando "Series.describe()":
+
+```
+wnba['Age'].describe()
+```
+
+O primeiro quartil é chamado de 25% (lower quartil), o segundo de 50% (middle quartil) e o terceiro de 75% (upper quartil).
+
+**Task:** Obter o "lower quartil" e o "10th percentil".
+
+```
+age_lower_quartile = wnba['Age'].describe()['25%']
+
+age_10th_percentile = wnba['Age'].describe([.10])['10%']
+```
