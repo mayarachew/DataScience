@@ -145,3 +145,7 @@ sampling_error_BMI = all_data['BMI'].mean() - sample['BMI'].mean()
 
 sampling_error_points = all_data['PTS'].mean() - sample['PTS'].mean()
 ```
+
+- "Descriptive statistics": Descrição da amostra ou população (proporções, métricas, propriedades).
+- "Inferential statistics": Quando utilizamos uma amostra para inferir conclusões a respeito de uma população.
+
