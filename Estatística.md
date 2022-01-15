@@ -356,3 +356,45 @@ wnba['Weight'].plot.hist()
 ```
 
 - **"Uniform distribution":** quando a distribuição é simétrica e os valores são distribuidos uniformemente, gerando barras da mesma altura.
+
+# Comparação entre distribuições de frequência
+
+**Task:** Estamos interessados em analisar como posição do jogador varia de acordo como nível de experiência dele.
+
+Opção 1: podemos analisar os valores puros em forma de tabela.
+```
+rookies = wnba[wnba['Exp_ordinal'] == 'Rookie']
+little_xp = wnba[wnba['Exp_ordinal'] == 'Little experience']
+experienced = wnba[wnba['Exp_ordinal'] == 'Experienced']
+very_xp = wnba[wnba['Exp_ordinal'] == 'Very experienced']
+veterans =  wnba[wnba['Exp_ordinal'] == 'Veteran']
+
+rookie_distro = rookies['Pos'].value_counts()
+little_xp_distro = little_xp['Pos'].value_counts()
+experienced_distro = experienced['Pos'].value_counts()
+very_xp_distro = very_xp['Pos'].value_counts()
+veteran_distro = veterans['Pos'].value_counts()
+
+print(rookie_distro, little_xp_distro, experienced_distro, very_xp_distro, veteran_distro)
+```
+
+Opção 2: podemos analisar os valores por meio de um gráfico chamado "grouped bar plot".
+```
+import seaborn as sns
+
+# hue = 'Pos': indica a variavel a ser comparada (subdivisão no eixo x)
+sns.countplot(x = 'Exp_ordinal', hue = 'Pos', data = wnba, order = ['Rookie', 'Little experience', 'Experienced', 'Very experienced', 'Veteran'], hue_order = ['C', 'F', 'F/C', 'G', 'G/F'])
+```
+
+**Task:** Vamos supor que temos a seguinte hipótese a ser verificada no dataset: quanto mais velhos os jogadores, a média de tempo de jogo diminui.
+
+```
+import seaborn as sns
+
+wnba['age_mean_relative'] = wnba['Age'].apply(lambda x: 'old' if x >= 27 else 'young')
+
+wnba['min_mean_relative'] = wnba['MIN'].apply(lambda x: 'average or above' if x >= 497 else 'below average')
+
+sns.countplot(x = 'age_mean_relative', hue = 'min_mean_relative', data = wnba)
+```
+ Com base nesse resultado, vemos que os jogadores mais velhos possuem mais tempo de jogo. Logo, rejeitamos a nossa hipótese inicial.
