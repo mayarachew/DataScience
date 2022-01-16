@@ -310,7 +310,7 @@ plt.ylabel('')
 ```
 
 ## Histograma
-Histograma é um gráfico de barras que representa a distribuição de frequências de uma variável. Pode incrementar a interpretação da função "db.describe()".
+Histograma é um gráfico de barras que representa a distribuição de frequências de uma variável. Podem ser utilizadas variáveis de intervalo e de razão. Ele complementa a interpretação da função "db.describe()".
 ```
 from numpy import arange
 
@@ -412,6 +412,7 @@ plt.show()
 ```
 
 ## Gráficos de densidade de kernel ou "kernel density estimate plots"
+Podem ser utilizadas variáveis de intervalo e de razão.
 
 Esse último gráfico ficou um tanto lotado de informações, então ainda podemos melhorar mais! Para isso, podemos utilizar gráficos de densidade de kernel.
 ```
@@ -426,6 +427,7 @@ plt.show()
 ```
 
 ## "Strip plot"
+Podem ser utilizadas variáveis de intervalo e de razão.
 
 **Task:** verificar a relação entre o peso dos jogadores e a posição deles no jogo.
 ```
@@ -438,3 +440,42 @@ plt.show()
 ```
 Podemos notar que os jogadores da posição "G" são os mais leves e os da posição "C" são os mais pesados.
 
+## Diagrama de caixa ou "Box plot"
+Podem ser utilizadas variáveis de intervalo e de razão.
+
+Além do gráfico de pontos mostrado acima, também podemos utilizar o diagrama de caixa:
+```
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+sns.boxplot(x = 'Pos', y = 'Weight', data = wnba)
+
+plt.show()
+```
+
+## Outlier
+Um valor pode ser considerado um outlier se for maior que o "upper quartile" em 1.5 vezes o intervalo interquartil ("interquartile range") e for menor que o "lower_quartile" em 1.5 vezes o intervalo interquartil.
+
+```
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# obter os valores dos quartiles
+upper_quartile = wnba['Games Played'].describe()['75%']
+lower_quartile = wnba['Games Played'].describe()['25%']
+
+# definir o intervalo interquartil
+iqr = upper_quartile - lower_quartile
+
+# multiplicar o intervalo por 1.5 e definir os limites superior e inferior
+upper_bound = upper_quartile + (iqr * 1.5)
+lower_bound = lower_quartile - (iqr * 1.5)
+
+# verificar quantos valores não estão dentro dos limites definidos (outliers)
+outliers_high = sum(wnba['Games Played'] > upper_bound)
+outliers_low = sum(wnba['Games Played'] < lower_bound)
+
+# plotar o gráfico
+sns.boxplot(wnba['Games Played'])
+plt.show()
+```
