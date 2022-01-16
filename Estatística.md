@@ -386,7 +386,7 @@ import seaborn as sns
 sns.countplot(x = 'Exp_ordinal', hue = 'Pos', data = wnba, order = ['Rookie', 'Little experience', 'Experienced', 'Very experienced', 'Veteran'], hue_order = ['C', 'F', 'F/C', 'G', 'G/F'])
 ```
 
-**Task:** Vamos supor que temos a seguinte hipótese a ser verificada no dataset: quanto mais velhos os jogadores, a média de tempo de jogo diminui.
+**Task:** Vamos supor que temos a seguinte hipótese a ser verificada no dataset: quanto mais velhos os jogadores, a média de tempo de jogo diminui. Nessa task vamos considerar que a idade que divide um jogador novo de um velho é 27 anos.
 
 ```
 import seaborn as sns
@@ -398,3 +398,43 @@ wnba['min_mean_relative'] = wnba['MIN'].apply(lambda x: 'average or above' if x 
 sns.countplot(x = 'age_mean_relative', hue = 'min_mean_relative', data = wnba)
 ```
  Com base nesse resultado, vemos que os jogadores mais velhos possuem mais tempo de jogo. Logo, rejeitamos a nossa hipótese inicial.
+ 
+Para melhorar a nossa análise, podemos criar um histograma sobreposto com a quantidade de tempo de jogo de acordo com a idade do jogador e marcar com uma linha o tempo médio de jogo.
+```
+import matplotlib.pyplot as plt
+
+wnba[wnba.Age >= 27]['MIN'].plot.hist(histtype = 'step', label = 'Old', legend = True)
+wnba[wnba.Age < 27]['MIN'].plot.hist(histtype = 'step', label = 'Young', legend = True)
+
+plt.axvline(497, label = 'Average')
+plt.legend()
+plt.show()
+```
+
+## Gráficos de densidade de kernel ou "kernel density estimate plots"
+
+Esse último gráfico ficou um tanto lotado de informações, então ainda podemos melhorar mais! Para isso, podemos utilizar gráficos de densidade de kernel.
+```
+import matplotlib.pyplot as plt
+
+wnba[wnba.Age >= 27]['MIN'].plot.kde(label = 'Old', legend = True)
+wnba[wnba.Age < 27]['MIN'].plot.kde(label = 'Young', legend = True)
+
+plt.axvline(497, label = 'Average')
+plt.legend()
+plt.show()
+```
+
+## "Strip plot"
+
+**Task:** verificar a relação entre o peso dos jogadores e a posição deles no jogo.
+```
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+sns.stripplot(x = 'Pos', y = 'Weight', data = wnba, jitter = True)
+
+plt.show()
+```
+Podemos notar que os jogadores da posição "G" são os mais leves e os da posição "C" são os mais pesados.
+
