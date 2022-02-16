@@ -12,11 +12,11 @@ I'm going to use a visualization to show the shoe colors that are more popular i
 Original visualization: https://viz.wtf/post/639589038118125568.
 
 <p align="center">
-    <img src="screenshots/DataVisualization/Barchart1.png" width="900">
+    <img src="screenshots/DataVisualization/Barchart1.png" width="400">
 </p>
     
 Improved visualization: https://datastudio.google.com/reporting/f4dc6ebc-d65f-4d56-809b-200cc7ce0e61
 
 <p align="center">
-    <img src="screenshots/DataVisualization/Barchart2.png" width="900">
+    <img src="screenshots/DataVisualization/Barchart2.png" width="400">
 </p>
