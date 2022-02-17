@@ -7,6 +7,8 @@ Os autoencoders são uma técnica de aprendizado não supervisionado que utiliza
 
 PS: A dimensão da saída costuma ser menor, pois a saída deve conter apenas as propriedades principais da entrada. Essas propriedades são ditas úteis/principais porque a partir delas deve ser possível reconstruir a entrada.
 
+After each somatory, ...An activated function is applied on each layer to improve the ..... The most indicated activated function for convolutional network is the "relu", because is computationally more efficient than the others ("sigmoid", "tanh" and "softmax") and the accuracy is just a bit lower. If "relu" does not provide a satisfactory result, we should try others functions.
+
 **Características:**
 - Não supervisionado (Alguns dizem que é auto supervisionado) 
 
@@ -40,3 +42,7 @@ A geração de novos dados é possível porque os dados de treinamento são regu
 #### Vantagens
 
 #### Desvantagens
+
+## References
+- https://medium.com/neuronio/understanding-convnets-cnn-712f2afe4dd3
+- https://iaexpert.academy/2020/05/25/funcoes-de-ativacao-definicao-caracteristicas-e-quando-usar-cada-uma/
