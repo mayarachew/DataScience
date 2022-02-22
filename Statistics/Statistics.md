@@ -1,3 +1,5 @@
+Tasks from DataQuest (https://app.dataquest.io/)
+
 **Dataset:** https://www.kaggle.com/jinxbe/wnba-player-stats-2017/version/1.
 
 ### Atividade sampling_error
