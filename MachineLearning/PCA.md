@@ -6,5 +6,5 @@ Scikit Learn implementation: https://scikit-learn.org/stable/modules/generated/s
 
 ## Examples:
 - Analyze PCA data of credit card dataset: https://github.com/mayarachew/Credit-Card-Fraud-Detection
-- Use PCA to project a text dataset to a bidimensional space: https://github.com/mayarachew/CompsciencePapers
+- Use PCA to project a multidimensional text dataset to a bidimensional space: https://github.com/mayarachew/CompsciencePapers
 
