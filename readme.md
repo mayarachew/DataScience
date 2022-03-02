@@ -7,7 +7,6 @@ Mayara C. Marinho
 ## Sumário
 0) Aprendizado supervisionado x não supervisionado
 0) Matriz de confusão
-0) Bias x variância
 1) Autoencoders
 2) Multinomial Naive Bayes Classifier
 
@@ -69,10 +68,6 @@ recall = TP/(TP + FN)
 ```
 F = [(B^2 + 1)PR]/(B^2P +R)
 ```
-
-### Bias x variância
-- **Bias**: é a diferença entre o valor da predição do modelo e o valor real que deveria ser obtido.
-- **Variância**: é o quanto a quantidade de acertos do modelo varia de acordo com diferentes predições, com diferentes valores de teste.
 
 ### Multinomial Naive Bayes Classifier
 #### O que é?
