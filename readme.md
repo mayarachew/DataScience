@@ -1,9 +1,6 @@
 # DataScience
 Anotações de estudo sobre Data Science.
 
-## Autores
-Mayara C. Marinho
-
 ## Sumário
 0) Aprendizado supervisionado x não supervisionado
 0) Matriz de confusão
