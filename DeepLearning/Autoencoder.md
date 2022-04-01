@@ -1,6 +1,6 @@
 Autoencoders são "generative models", tendo em vista que são não supervisionados e têm o objetivo de descobrir/detectar padrões nos dados de entrada de forma a criar novos dados semelhantes aos da entrada.
 
-### Autoencoders simples
+### Autoencoder simples
 
 #### O que é?
 Os autoencoders são uma técnica de aprendizado não supervisionado que utiliza redes neurais para codificar uma entrada (por meio de neurônios) e depois decodificá-la para gerar uma nova representação como saída. Ou seja, é uma técnica que aprende a partir de exemplos e gera saídas com dimensões (geralmente) menores e propriedades úteis extraídas dos exemplos originais.
