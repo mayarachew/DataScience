@@ -1,6 +1,6 @@
 # DataScience
-Anotações de estudo sobre Data Science.
-
+Anotações de estudo sobre Ciência de Dados ("Data Science").
+<!-- 
 ## Sumário
 0) Aprendizado supervisionado x não supervisionado
 0) Matriz de confusão
@@ -8,31 +8,6 @@ Anotações de estudo sobre Data Science.
 2) Multinomial Naive Bayes Classifier
 
 ## Notebook
-
-### Aprendizado supervisionado x não supervisionado
-
-#### Aprendizado supervisionado
-**Dados:** Dados de treinamento rotulados;x: dados; y: rótulo.
-
-**Objetivo:** Aprender uma função que gere algo a partir dos dados de treinamento (entrada); x -> y.
-
-**Exemplos:**
-- Classificação
-- Detecção de objetos
-- Semantic segmentation (segmenta uma imagem de acordo com características dos pixels)
-- Captação de imagem (transforma uma imagem em frases)
-
-#### Aprendizado não supervisionado
-**Dados:** Dados de treinamento não rotulados.
-
-**Objetivo:** Aprender propriedades/estruturas "escondidas" a partir dos dados informados.
-
-**Exemplos:**
-- Clustering
-- Redução de dimensionalidade
-- Feature learning (aprende propriedades específicas)
-- Density estimation (estima a distribuição/densidade dos dados)
-
 
 ### Matriz de confusão
 - TP: "true positive", classificado certo como positivo
@@ -88,6 +63,6 @@ Por ignorar a relação entre as palavras, pode-se dizer que Naive Bayes possui 
 #### Materiais de referência
 - Aplicação em SPAM de emails: https://www.youtube.com/watch?v=O2L2Uv9pdDA
 
-Pode ser utilizado para 
+Pode ser utilizado para  -->
 
 
