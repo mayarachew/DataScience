@@ -6,7 +6,7 @@ Perceptron é um modelo, um neurônio, desenvolvido por Rossemblat em 1958. Este
 **Características:**
 - Possui apenas uma camada ("single layer") com função de threashold, com pesos [-1, 0, 1].
 - Estratégia de aprendizado: correção de erros ("error correction"). É criada uma curva/superfície/hyper-superfície que define o erro gerado pelos parâmetros livres, nesse caso o peso, e um valor mínimo global é encontrado para realizar o ajuste dos pesos.
-- Função de ativação: produto interno da entrada pelo respectivo peso.
+- Função de ativação: threashold aplicado ao produto interno da entrada pelo respectivo peso.
 - Possui um parâmetro livre da rede neural chamado "bias" com peso associado e entrada sempre 1, que faz um ajuste do hyperplano.
 
 ## Para que pode ser utilizado?
