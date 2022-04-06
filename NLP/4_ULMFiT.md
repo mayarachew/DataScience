@@ -1,7 +1,7 @@
 # ULMFiT
 
 Universal Learning Fine-tuning for Text Classification (ULMFiT) é um modelo de NLP criado em 2018 composto por 3 etapas:
-- Pré-treinamento do modelo de linguagem com um dataset amplo para adquirir conhecimento de linguagem
+- Pré-treinamento do modelo de linguagem com um dataset amplo para adquirir conhecimento da linguagem a ser utilizada
 - Treinamento com o dataset de treinamento de uma tarefa específica
 - Classificação do dataset de teste
 
