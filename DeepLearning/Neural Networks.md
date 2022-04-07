@@ -52,6 +52,29 @@ Para Multilayer Perceptron recomenda-se a utilização de tangente hiperbólica 
 
 PS: camadas de neurônios costumam utilizar a mesma função de ativação, com exceção da camada de saída.
 
+## Normalização
+Existe com o objetivo de evitar overfitting, o sobre-ajuste dos dados de treinamento.
+
+### Termos de relugarização
+Adição de termos ao cálculo do erro pode evitar com que o modelo seja muito ajustado aos dados de treinamento.
+
+- **L1**: adiciona a soma dos valores absolutos como uma penalidade ao cálculo do erro ("loss function").
+- **L2**: adiciona a soma dos valores ao quadrado como uma penalidade ao cálculo do erro.
+
+### Dataset expansion
+Expansão o conjunto de treinamento, construindo amostras artificiais ou ruídos. 
+Exemplos de aplicação:
+- **Reconhecimento de objetos**: rotacionar ou escalar imagens.
+- **Reconhecimento de discurso**: adicionar ruído aleatório.
+- **NLP**: substituir as palavras pelos seus sinônimos.
+- **Classificação**: balanceamento dos dados em caso de detecção de fraude com poucos dados fraudulentos; Classificação utilizando a função de ativação Softmax pode gerar um ruído na definição de labels.
+
+### Dropout
+Uma camada dropout remove os neurônios de algumas camadas da rede, evitando a especialização desta. O número de neurônios é definido pelos desenvolvedores, mas deve ser uma % pequena para que haja conversão. O Dropout deve ser aplicado apenas aos dados de treinamento e não aos dados de teste.
+
+### Early stopping: técnicas de interrupção do treinamento
+Monitoramento da taxa de erro ("loss function"). Por exemplo, parar o treinamento no momento que a taxa de erro permanecer o mesmo por 3 vezes seguidas. "Early stopping" busca o momento em que o erro nos dados de treinamento e de teste são baixos, para evitar sobre-ajuste.
+
 ## Referências
 
 - https://www.deeplearningbook.com.br/funcao-de-ativacao/
