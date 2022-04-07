@@ -50,6 +50,8 @@ Em tarefas de classificação, geralmente é necessário utilizar a softmax na �
 
 Para Multilayer Perceptron recomenda-se a utilização de tangente hiperbólica ou sigmoid.
 
+PS: camadas de neurônios costumam utilizar a mesma função de ativação, com exceção da camada de saída.
+
 ## Referências
 
 - https://www.deeplearningbook.com.br/funcao-de-ativacao/
