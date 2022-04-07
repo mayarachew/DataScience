@@ -27,7 +27,23 @@ Também pode ser chamada de "Artificial Neural Network" ou "Multilayer Perceptro
 - Arquitetura mais comum: totalmente conectada ("fully connected").
 - No caso de existirem 3 camadas, a primeira é responsável por criar um hyper-plano no espaço de entrada, a segunda camada por criar regiões convexas e a terceira por criar combinações de figuras convexas.
 
-<!-- ## Regras de treinamento -->
+## Tipos de feedforward neural networks
+
+### Convolutional Neural Network (CNN)
+Redes neurais convolucionais incluem camadas convolucionais e de "pooling" para compartilhar informações locais e uma camada "fully connected" para tarefas de classificação. Geralmente, a função de ativação Softmax é utilizada nessa última camada. 
+
+- **Convolução** consiste em aplicar um filtro em uma imagem e obter o resultado, uma matriz convolucionada.
+- **"Pooling"** consiste em reduzir a dimensionalidade da imagem por meio de convolução. "Max pooling" utiliza o maior valor para representar determinada área nessa redução de dimensionalidade, enquanto o "average pooling" utiliza o valor médio da área. Esse processo é feito repetitidamente, com diferentes áreas da matriz presente na camada para obter uma matriz menor.
+
+Sua aplicação é muito utilizada em processamento de imagens/visão computacional, por dois princípios:
+
+- **Local receptive field**: neurônios analisando parte das imagens ("local image") ao invés de analisar a imagem inteira ("global image"). As camadas de convolução permitem a detecção de objetos sem *decorar* o local que eles devem aparecer, como é comum acontecer em redes neurais.
+- **Parameter sharing**: um ou mais filtros/kernels com pesos podem ser utilizados para escanear as imagens. Nesse caso, cada filtro escaneia uma imagem inteira, com parâmetros fixos.
+
+Processo completo de aplicação de CNN em uma imagem:
+1) Leitura da imagem
+2) Vetorização da imagem ou aplicação de uma camada de convolução e pooling
+3) Aplicação de uma rede neural total mente conectada "fully connected" para classificação
 
 ## Funções de erro/perda
 
