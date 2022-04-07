@@ -26,10 +26,29 @@ Uma rede neural é formada por 1 camada de entrada, n camadas intermediárias, 1
 
 ## Funções de ativação
 
-- Linear
-- Threashold
-- Sigmoid
-- "Hyperbolic Tangent" ou Tangente Hiperbólica
+### Linear
+Deve-se tomar cuidado com funções lineares, pois costumam limitar o desempenho da rede por não conseguirem aprender bem com os dados.
+
+### Threashold
+
+### Sigmoid
+Range: (0,1). Função monotônica*, contínua, não passa pela origem e não é simétrica. Derivada não monotônica, o que é um ponto negativo porque, para resultados da função de ativação pequenos ou altos possuem, a derivada possui valores semelhantes, o que pode atrapalhar a rede. Recomendada para redes menos profundas.
+
+* Função sempre crescente ou sempre descrescente.
+
+### "Hyperbolic Tangent" ou Tangente Hiperbólica
+Range: (-1,1). Função monotônica, contínua, simétrica. Derivada não monotônica, contínua. Ao utilizá-la, é importante saber que os valores de saída podem ser negativos, por conta do range (-1, 1). Recomendada para redes menos profundas.
+
+### Rectified Linear Unit (ReLU)
+Se o valor for igual ou maior a um limiar, retorna um resultado x e se ficar abaixo deste limiar, retorna 0. Range: (0, infinito). Função monotônica, não contínua, não simétrica. Derivada com comportamento de degrau, não monotônica, não contínua, não tem derivada no 0. É muito utilizada por conta de sua simplicidade. Recomendada para redes mais profundas.
+
+### Softplus
+Se assemelha bastante com a ReLU. Possui derivada no 0, mas é um pouco mais custosa que a ReLU. Recomendada para redes mais profundas.
+
+### Softmax
+Em tarefas de classificação, geralmente é necessário utilizar a softmax na última camada, pelo fato de ela fazer uma cálculo ponderado com as probabilidades de ser determinada classe na camada de saída (tipo uma normalização).
+
+Para Multilayer Perceptron recomenda-se a utilização de tangente hiperbólica ou sigmoid.
 
 ## Referências
 
