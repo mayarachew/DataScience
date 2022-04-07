@@ -45,30 +45,32 @@ A Função de custo quadrático ou ("Quadratic Cost Function") costuma ser a mai
 
 A Função de entropia cruzada ou ("Cross Entropy Error") é mais complexa que a função de custo quadrático.
 
-## Formas de ajuste de pesos
+## Otimizadores: formas de ajuste de pesos
 
 Serão citadas abaixo técnicas para ajustar os pesos das camadas intermediárias de forma que minimize o erro final.
 
-### Gradiente descendente
+### Gradient descendent
 
 Em um gráfico gerado pela função de erro escolhida por parâmetros livres, o gradiente descendente é representado por vetores que indicam o mínimo global do gráfico, que minimiza o valor do erro.
 
-#### Batch gradient descendent algorithm (BGD)
+### Batch gradient descendent algorithm (BGD)
 É a aplicação do gradiente descendente em forma de lote, calculando o erro associado a cada uma das amostras do dataset. Esse algoritmo aprende bem, mas é bastante custoso pela fórmula que requer vários parâmetros devido à aplicação em cada uma das amostras.
 
-#### Stochastic gradient descendent algorithm (SGD)
+### Stochastic gradient descendent algorithm (SGD)
 Muito semelhante ao BGD, porém mais otimizado, porque, ao invés de aplicar em todas as amostras, é escolhida aleatoriamente uma das amostras para calcular o erro associado. Em relação ao BGD, tende a errar mais justamente por essa aleatoriedade.
 
-#### Mini-batch gradient descendent algorithm (MBGD)
+### Mini-batch gradient descendent algorithm (MBGD)
 Criado com base no BGD e no SGD, o MBGD escolhe um subconjunto de amostras para calcular o erro associado. A % que o subconjunto representa em relação ao dataset total deve ser escolhida pelo programador. Esse algoritmo gera resultados e custos computacionais intermediários entre BGD e SGD, por isso costuma ser o mais utilizado.
 
 ### Algoritmo de Backpropagation
 
-Este algoritmo estima o efeito dos erros das camadas intermediárias no erro da camada de saída, utilizando a função de erro escolhida.
+Este algoritmo utiliza o gradiente descendente e estima o efeito dos erros das camadas intermediárias no erro da camada de saída, utilizando a função de erro escolhida.
 
 - Utiliza a regra Delta generalizada.
 - Requer funções de ativação contínuas e diferenciáveis, para evitar situações com derivada indefinida.
 - A derivada parcial é utilizada para medir a contribuição de cada peso para o erro final. Caso a derivada seja positiva, significa que existe um aumento do erro. Caso a derivada seja negativa, signitica que existe uma diminuição do erro.
+
+PS: Existem outros algoritmos baseados em gradiente descendente que são mais utilizados atualmente, como: AdaGrad, RMSProp, Adam, AdaMax, Nadam.
 
 ## Funções de ativação
 
