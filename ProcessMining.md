@@ -6,8 +6,8 @@ Mineração de processos é utilizada para melhorar processos reais, por meio da
 ## Etapas
 1) Coletar dados
 2) Armazenar dados
-3) Catalogar dados
-4) Transformar dados
+3) Catalogar dados (entender e documentar)
+4) Transformar dados (limpar e padronizar)
 5) Minerar dados
 6) Explorar dados
 
