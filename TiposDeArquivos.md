@@ -5,7 +5,9 @@ Arquivo com armazenamento em formato de coluna para facilitar buscas, diminuindo
 
 - Suporta armazenamento de dados estruturados (com tipos);
 - Utilizado em analytics use cases (OLAP);
-- Utilizado para big data.
+- Utilizado para big data;
+- Menos custos;
+- Buscas rápidas.
 
 ## .jsonl
 JSON Line ou newline-delimited JSON. Para poupar espaço, pode ser comprimido utilizando gzip or bzip2.
