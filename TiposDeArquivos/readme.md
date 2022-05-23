@@ -1,6 +1,6 @@
 # Tipos de Arquivos
 
-## .parquet
+## Parquet (.parquet)
 Arquivo com armazenamento em formato de coluna para facilitar buscas, diminuindo assim o tempo da busca e o custo de armazenamento.
 
 - Suporta armazenamento de dados estruturados (com tipos);
@@ -9,8 +9,14 @@ Arquivo com armazenamento em formato de coluna para facilitar buscas, diminuindo
 - Menos custos;
 - Buscas rápidas.
 
-## .jsonl
-JSON Line ou newline-delimited JSON. Para poupar espaço, pode ser comprimido utilizando gzip or bzip2.
+## JSON 
+
+### JSON Multiline (.json)
+- Utiliza UTF-8 Encoding;
+- O JSON de um registro pode ocupar mais de uma linha.
+
+### JSON Line (.jsonl)
+JSON Line ou newline-delimited JSON.
 
 - Utiliza UTF-8 Encoding;
 - Cada linha é um valor JSON válido;
