@@ -30,3 +30,4 @@ Assim, o conjunto final de cada iteração será composto por: Treinamento' + va
 
 - Biblioteca Scikit Learn: https://scikit-learn.org/stable/modules/cross_validation.html
 - Explicação mais detalhada de Cross Validation: https://towardsdatascience.com/cross-validation-explained-evaluating-estimator-performance-e51e5430ff85
+- Exemplo (código) de Stratified K-Fold Cross Validation: https://github.com/viniciusrpb/cloud_image_classification/blob/main/selenastraceae_greenalga_classification.ipynb
