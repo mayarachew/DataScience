@@ -40,6 +40,7 @@ Atua de forma semelhante ao Boosting também, mas treina os modelos diretamente 
 Neste método, as predições dos modelos são utilizadas como features, assim, o modelo final tem mais certeza de onde os modelos performaram melhor e coloca mais peso, enquanto coloca menos peso aonde os modelos performaram pior.
 
 ## Aplicações
+- Quando nota-se que dados de um dataset possuem aspectos diferentes, que podem favorecer a classificação por diferentes modelos
 - Conjunto de dados não balanceado
 
 ## Referências
@@ -47,4 +48,6 @@ Neste método, as predições dos modelos são utilizadas como features, assim, 
 - Pacote para ensemble learning no Scikit Learn: https://scikit-learn.org/stable/modules/ensemble.html
 - Aula sobre Ensemble Learning e exemplos: https://www.youtube.com/watch?v=WtWxOhhZWX0&ab_channel=Simplilearn
 - Aula sobre Ensemble Learning para dados desbalanceados: https://www.youtube.com/watch?v=53uUM_5rRtA&ab_channel=Dr.DataScience
-- Exemplo de stratified K-Fold com BaggingClassifier da Scikit Learn: https://machinelearningmastery.com/bagging-and-random-forest-for-imbalanced-classification/
+- Exemplo de stratified K-Fold com BaggingClassifier da Scikit Learn: https://machinelearningmastery.com/bagging-and-random-forest-for-imbalanced-classification/ 
+- BaggingClassifier utiliza apenas um classificador base, caso você queira utilizar mais de um, provavelmente terá que implementar do zero: https://www.geeksforgeeks.org/ensemble-methods-in-python/
+
