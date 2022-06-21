@@ -27,3 +27,8 @@ Boosting é realizado com a aplicação sequencial de modelos preditivos a fim d
 3) Observar se as dificuldades diminuíram;
 4) Repetir os passos anterioes até que acabem os modelos preditivos a serem analisados;
 5) Realizar a predição final.
+
+## Referências
+- Conceito e exemplo prático: https://medium.com/turing-talks/turing-talks-24-modelos-de-predi%C3%A7%C3%A3o-ensemble-learning-aa02ce01afda
+- Pacote para ensemble learning no Scikit Learn: https://scikit-learn.org/stable/modules/ensemble.html
+- Aula: https://www.youtube.com/watch?v=WtWxOhhZWX0&ab_channel=Simplilearn
