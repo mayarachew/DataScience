@@ -26,4 +26,11 @@
 - Feature learning (aprende propriedades específicas)
 - Density estimation (estima a distribuição/densidade dos dados)
 
+# Weak Supervision (ou supervisão fraca)
+
+**Problema:** Você pode se deparar com conjuntos de dados que não são rotulados por falta de conhecimento acerca da categoria deles, ou dados que possuem uma quantidade insuficiente de instâncias rotuladas para realizar uma tarefa de Machine Learning, ou dados que são difíceis e custosos de se rotular.
+
+Weak Supervision é uma técnica que visa solucionar este problema utilizando dados imprecisos, desorganizados e com ruído para rotular um conjunto de dados.
+
 ## Referências
+- https://analyticsindiamag.com/a-complete-guide-to-weak-supervision-in-machine-learning/
