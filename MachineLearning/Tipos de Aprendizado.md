@@ -26,7 +26,7 @@
 - Feature learning (aprende propriedades específicas)
 - Density estimation (estima a distribuição/densidade dos dados)
 
-# Weak Supervision (ou supervisão fraca)
+## Weak Supervision (aprendizado fraco)
 
 **Problema:** Você pode se deparar com conjuntos de dados que não são rotulados por falta de conhecimento acerca da categoria deles, ou dados que possuem uma quantidade insuficiente de instâncias rotuladas para realizar uma tarefa de Machine Learning, ou dados que são difíceis e custosos de se rotular.
 
