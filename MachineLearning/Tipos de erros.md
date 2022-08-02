@@ -27,3 +27,6 @@ Validação cruzada:
 ## Stratified K-fold
 Com muitos dados, stratified k-fold ajuda a medir a capacidade de escalonamento do modelo; É bom evitar modelos que possuem o desvio padrão alto avaliando diferentes trials no stratified k-fold, pois indica uma variação muito alta nos resultados, podendo gerar acurácias muito boas ou muito ruins dependendo dos dados de entrada. Vale mais a pena manter um modelo com desvio padrão baixo, que significa um modelo que obtém acurácias um tanto semelhantes para diferentes dados de entrada.
 Com poucos dados, ele pode causar overfitting.
+
+## Stratified K-fold com validação
+Bom evitar caso tenha poucos dados, pois sobrarão poucas instâncias de cada uma das classes, o que pode dificultar o treinamento do modelo (leave one out pode ser uma saída nesse caso).
