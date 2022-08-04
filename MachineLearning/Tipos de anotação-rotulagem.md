@@ -24,3 +24,25 @@ Utiliza a rotulação manual em alguns dados e ou outros são rotulados com a aj
 **neutralização da teoria**
 
 #### seleção e treinamento de anotadores
+risco de supertreino
+pouco treino
+falta se consistência no critério de anotação
+expertise dos anotadores (especialistas, entendedores, "leigos")
+quantidade de anotadores
+tipos de anotadores (voluntários e remunerados)
+
+#### Especificação do procedimento de anotação
+anotações preliminares
+discussão de discordâncias
+presença de juíz
+quantidade de "passadas de anotação" (panotação + revisão/resolução de discordâncias)
+planejamento, cronograma de execução
+questões humanas (cansaço, vontade, erro, inconsistência)
+
+#### Projeto de interface de anotação
+facilidade: ferramentas que facilitam como o INCEPTION, bi TAGTOC, TEAMTAT,LABELSTUDIO, 
+sem bias: cuidado com recomendações automáticas que influenciam
+...
+
+Ferramentas para anotação: Inception, BI,Tagtoc, Teamtat, LabelStudio.
+
