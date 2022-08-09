@@ -46,3 +46,9 @@ Utiliza a rotulação manual em alguns dados e ou outros são rotulados com a aj
 
 Ferramentas para anotação: Inception, BI,Tagtoc, Teamtat, LabelStudio.
 
+### Métricas para avaliação de rótulos
+#### Coeficiente Alfa de Krippendorff
+Vantagens:
+- Permite a presença de múltiplos anotadores por documento
+- Presença de vários rótulos ou entidades
+- Existência de valores ausentes
