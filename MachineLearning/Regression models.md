@@ -14,4 +14,4 @@ Os valores preditos nunca ultrapassam os valores de treinamento. Dessa forma, um
 
 - https://www.geeksforgeeks.org/random-forest-regression-in-python/
 - Comparação entre Decision Tree e Random Forest + Problema de extrapolação: https://neptune.ai/blog/random-forest-regression-when-does-it-fail-and-why
-- 
+- Regression for time series: https://otexts.com/fpp2/regression-intro.html
