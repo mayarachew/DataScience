@@ -1,5 +1,7 @@
 # Métricas de avaliação de classificadores
 
+Existem diversas métricas de avaliação de classificadores, as principais estão listadas a seguir. Após conhecer cada uma delas, cabe a você decidir qual deve ser a melhor para avaliar os seus resultados, tendo em vista que nem todas as métricas são aplicáveis em todos os casos e que, consequentemente, podem gerar uma avaliação incoerente com a realidade ou com o que se quer medir.
+
 ## Matriz de confusão
 
 ## Acurácia
