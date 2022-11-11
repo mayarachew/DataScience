@@ -27,6 +27,9 @@ Também pode ser desejável que um método de cluster:
 - Seja aplicável a datasets com altas dimensões
 - Tenha resultados interpretáveis
 
+### Coeficiente Silhouette
+Mede o quão similares os objetos do mesmo cluster são e o quão distintos estes são dos outros clusters. É calculada uma medida de Silhouette para cada cluster, assim, para obter a medida global do clustering, deve ser realizada uma média desses valores. Esta medida é bastante utilizada em clusterings por particionamento.
+
 ## Medidas de distância e similaridade
 
 ### Atributos numéricos
@@ -44,7 +47,29 @@ Caso os valores sejam iguais, a distância será 0, caso os valores sejam difere
 Quando os dados são divididos em partições de acordo com um critério.
 
 #### Métodos heurísticos
-#### 
+##### K-means
+
+**Vantagens:** 
+- Complexidade O(tkn) -> n é o número de objetos, k é o número de clusters e t é o número de iterações.
+- Geralmente encontra um ótimo local para o centro de cada cluster (lembrando que o valor do centro dos clusters varia dependendo da seleção inicial dos centros)
+
+**Desvantagens:**
+- Aplicável apenas quando se pode calcular a média (mais aplicável a dados numéricos)
+- Precisa definir previamente o número k de clusters
+- Sensível a ruído e outliers
+- Indicado apenas para cluster que tenham o formato no padrão esférico
+
+##### K-medoids
+
+##### Mean Shift
+Esta técnica não utiliza um valor k de clusters, mas sim um valor de raio (bandwith) dos círculos que delimitam os clusters. Este raio pode ser estimado com k-NN.
+
+##### DBSCAN
+**Vantagens:**
+- Lida bem com outliers, já que os clusters possuem formatos distintos.
+
+##### BIRCH (clustering incremental)
+A cada novo dado que chega, o algoritmo agrega este dado a um cluster.
 
 ### Hierárquico
 Quando os dados são divididos em partições hierárquicas de acordo com algum critério. Dessa forma, primeiro os dados são particionados grupos e depois estes grupos podem ser particionados outras vezes e outras vezes para gerar clusters diferentes.
